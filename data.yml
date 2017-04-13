@@ -1,0 +1,159 @@
+keys:
+  base:
+    - consonants
+    - vowels
+    - other
+
+  mid:
+    - mid_patterns
+    - clusters
+
+  front:
+    - beginning
+    - beginning_patterns
+
+  end:
+    groups:
+      - final
+      - final_patterns
+    suffix: true
+
+char_sets:
+  C: consonants
+  V: vowels
+  B: [b, g, d, k, p, t]
+  G: [h., H, ch, '`']
+  F:
+    key: front
+    chars: consonants
+
+consonants:
+  "'": א
+  b: ב
+  v: ב
+  g: ג
+  d: ד
+  h: ה
+  w: ו
+  z: ז
+  H: ח
+  ch: ח
+  T: ט
+  y: י
+  k: כ
+  kh: כ
+  l: ל
+  m: מ
+  n: נ
+  s: ס
+  "`": ע
+  p: פ
+  f: פ
+  q: ק
+  r: ר
+  ts: צ
+  S: שׂ
+  sh: שׁ
+  t: ת
+  th: ת
+
+vowels:
+  :: ְ
+  i:  ִ
+  iy:  ִי
+  I:  ִי
+  Iy:  ִי
+  'e:': ֱ
+  e:  ֶ
+  E:  ֵ
+  ey:  ֶי
+  Ey:  ֵי
+  'a:':  ֲ
+  a:  ַ
+  A:  ָ
+  'o:':  ֳ
+  o:  ָ
+  O:  ֹ
+  Ow: וֹ
+  ow: וֹ
+  u:  ֻ
+  uw: וּ
+  U: וּ
+  Uw: וּ
+
+other:
+  .:  ּ
+  <:  ֫
+  ^: ֑
+
+clusters:
+  "k'h": כה
+  "s'h": סה
+  "t's": תס
+  "t'h": תה
+  bb: בּ
+  gg: גּ
+  dd: דּ
+  ww: וּ
+  vv: וּ
+  Oww:  ֹוּ
+  oww: וֹּ
+  Ovv:  ֹוּ
+  ovv:  ֹוּ
+  zz: זּ
+  TT: טּ
+  yy: יּ
+  kk: כּ
+  ll: לּ
+  mm: מּ
+  nn: נּ
+  pp: פּ
+  ss: סּ
+  tts: צּ
+  qq: קּ
+  tsts: צּ
+  SS: שּׂ
+  ssh: שּׁ
+  shsh: שּׁ
+  tt: תּ
+
+mid_patterns:
+  CC: \1ְ\2
+  CB: \1ְ\2ּ
+  OwV:  ֺו\1
+  'AC:':  ָֽ\1ְ
+  "'C": א\1
+
+final:
+  k: ךְ
+  kh: ךְ
+  kA: ךָ
+  khA: ךָ
+  kkA: ךָּ
+  kA<: ךָ֫
+  khA<: ךָ֫
+  kkA<: ךָּ֫
+  m: ם
+  n: ן
+  nA: ןָ
+  f: ף
+  ts: ץ
+  ah:  ָה
+  a<h:  ָ֫ה
+
+final_patterns:
+  Ct: \1ְתְּ
+  VaG: \1\2ַ
+  Vah: \1הַּ
+
+beginning:
+  B: \1ּ
+
+beginning_patterns:
+  FC: \1ְ\2
+
+broken_clusters:
+  kh: "k'h"
+  sh: "s'h"
+  ts: "t's"
+  th: "t'h"
