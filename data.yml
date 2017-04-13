@@ -148,6 +148,7 @@ final_patterns:
 
 beginning:
   B: \1ּ
+  V: א\1
 
 beginning_patterns:
   FC: \1ְ\2

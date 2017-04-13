@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import sys
 import unicodedata
 from pathlib import Path
 import deromanize
@@ -24,16 +23,25 @@ def make_pointy(keys, word):
 
 
 def make_pointy_line(line):
-    return unicodedata.normalize(
-        'NFC', ' '.join(make_pointy(word) for word in line.split()))
+    return ' '.join(make_pointy(word) for word in line.split())
 
 
 def main():
-    if sys.argv[1:]:
-        print(make_pointy_line(' '.join(sys.argv[1:])))
-    else:
-        for line in sys.stdin:
-            print(make_pointy_line(line))
+    import sys
+    import argparse
+    ap = argparse.ArgumentParser()
+    add = ap.add_argument
+    add('string', nargs='*', default=sys.stdin,
+        help='ascii text to make pointy')
+    add('-n', '--normalize', action='store_true',
+        help='apply canonical normalization')
+    args = ap.parse_args()
+
+    for line in args.string:
+        pointy = make_pointy_line(line)
+        if args.normalize:
+            pointy = unicodedata.normalize('NFC', pointy)
+        print(pointy)
 
 
 if __name__ == '__main__':
