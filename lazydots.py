@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import unicodedata
 from pathlib import Path
 import deromanize
