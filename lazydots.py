@@ -11,13 +11,13 @@ keys = deromanize.TransKey(PROFILE)
 @keys.processor
 def make_pointy(keys, word):
     end, remainder = keys['end'].getpart(word)
-    try:
+    if remainder:
         front, remainder = keys['front'].getpart(remainder)
-    except KeyError:
+    else:
         return end
-    try:
+    if remainder:
         middle = keys['mid'].getallparts(remainder).add()
-    except KeyError:
+    else:
         return front + end
     return (front + middle + end)[0].value
 
