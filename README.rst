@@ -6,7 +6,7 @@ with minimal effort.
 
 replacement table
 
-=============
+===== =======
 ascii  hebrew
 =====  ======
 '      א
