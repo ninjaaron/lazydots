@@ -12,6 +12,7 @@ setup(
     long_description=open('README.rst').read(),
     keywords='hebrew',
     py_modules=['lazydots'],
-    entry_points={'console_scripts': ['lzd=lazydots:main']},
+    entry_points={'console_scripts':
+        ['lzd=lazydots:read_text', 'lzdclip=lazydots:clipped']},
     install_requires=['deromanize', 'PyYaml'],
 )

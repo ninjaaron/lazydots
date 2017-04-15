@@ -3,8 +3,11 @@ from pathlib import Path
 import deromanize
 import yaml
 
-PROFILE = yaml.safe_load((Path(__file__).parent/'data.yml').open())
-keys = deromanize.TransKey(PROFILE)
+CONFIG_FILE = Path(__file__).parent/'data.yml'
+CACHE_PATH = Path().home()/'.cache'/'lzdcache'
+CACHE_PATH.parent.mkdir(exist_ok=True)
+with CONFIG_FILE.open(encoding='utf-8') as config:
+    keys = deromanize.cached_keys(yaml.safe_load, config, CACHE_PATH)
 
 
 @keys.processor
@@ -22,12 +25,19 @@ def make_pointy(keys, word):
 
 
 def make_pointy_line(line):
+    if line == '':
+        return ''
     return ' '.join(make_pointy(word) for word in line.split())
 
 
-def main():
+def make_pointy_text(text):
+    return '\n'.join(map(make_pointy_line, text.splitlines()))
+
+
+def read_text():
     import sys
     import argparse
+
     ap = argparse.ArgumentParser()
     add = ap.add_argument
     add('string', nargs='*', default=sys.stdin,
@@ -36,12 +46,11 @@ def main():
         help='apply canonical normalization')
     args = ap.parse_args()
 
-    for line in args.string:
-        pointy = make_pointy_line(line)
-        if args.normalize:
-            pointy = unicodedata.normalize('NFC', pointy)
+    pointy = '\n'.join(make_pointy_line(l) for l in args.string)
+    if args.normalize:
+        pointy = unicodedata.normalize('NFC', pointy)
+
+    if sys.stdout.isatty():
         print(pointy)
-
-
-if __name__ == '__main__':
-    main()
+    else:
+        print(pointy, end='')
