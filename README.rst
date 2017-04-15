@@ -52,6 +52,8 @@ Please report bugs!
 vowels
 
 =====  ======  =====  ======
+ascii  hebrew  ascii  hebrew
+=====  ======  =====  ======
 :         ְ     A         ָ
 i         ִ     o:        ֳ
 I         ִי    o         ָ
