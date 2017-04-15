@@ -125,6 +125,7 @@ dubs:
 
 mid_patterns:
   CB: \1ְ\2ּ
+  VV: \1א\2
   OwV:  ֺו\1
   owV: וֹ\1
   'AC:':  ָֽ\1ְ

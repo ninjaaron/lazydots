@@ -44,7 +44,8 @@ Inversely, if you're not getting a dagesh where you want it, you can
 mark it explicitly with a period. You should never really need to do
 this. Geminated consonants and BeGaD KeFaT letters at the beginnings of
 will automatically get their dagesh when it is appropriate. Still, if
-something goes wonky, you can get what you need.
+something goes wonky, you can get what you need (and you will probably
+need to tell it about mappiq).
 
 Please report bugs!
 
@@ -76,6 +77,16 @@ vowel. Of course, in the case of /i/ class and /u/ class, there is no
 unmarked long form, so the marking can be inferred from the context.
 However, they may also be marked.
 
+You should only use the ":" to mark vocal schwa. Silent schwa will
+automatically be supplied. In general, you don't really have to mark the
+vocal schwa either, but you do need it for BeGaD KeFaT letters.
+
+The software should automatically add meteg to disambiguate between
+qamats qatan and qamats gadol when necessary. The Oleh accent is
+available for regularly accented words, and the atnachta for pausal
+forms. I may eventually create a mechanism to add the rest of the
+cantillation.
+
 Note that the algorithm tries to be tolerant and will attempt to "fix
 your mistakes" and may occasionally give you a long when you specified a
 short or marked when you specified unmarked based on phonetic
@@ -84,13 +95,6 @@ phonetically impossible. This may cause issues if you're trying to
 reproduce rare forms that end with qibbuts or hiriq. If this happens,
 just stick an extra consonant on the end and delete it once you get the
 Hebrew :D
-
-You should only use the ":" to mark vocal schwa. Silent schwa will
-automatically be supplied. In general, you don't really have to mark the
-vocal schwa either, but you do need it for BeGaD KeFaT letters.
-
-The software should automatically add meteg to disambiguate between
-qamats qatan and qamats gadol when necessary.
 
 Some special notes about holems and consonantal vavs:
 
@@ -103,9 +107,9 @@ Some special notes about holems and consonantal vavs:
 
  It you ever need to produce a holem with a geminated vav (I don't think
  this actually exists in the Bible, but please correct me if I'm wrong),
- simply write *Ow.* (explicit dagesh). The normal methods will not work
- in this case because *Oww* actually means a holem-vav followed by a
- consonantal vav.
+ simply write "*Ow.*" (explicit dagesh). The normal methods will not
+ work in this case because *Oww* actually means a holem-vav followed by
+ a consonantal vav.
 
 Please report bugs!
 
