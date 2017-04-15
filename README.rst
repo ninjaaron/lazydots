@@ -58,10 +58,10 @@ ascii  hebrew  ascii  hebrew
 i         ִ     o:        ֳ
 I         ִי    o         ָ
 e:        ֱ     O         ֹ
-e         ֶ     O         ֹ
-E         ֵ     Ow       וֹ
-a:        ֲ     u         ֻ
-a         ַ     U        וּ
+e         ֶ     Ow       וֹ
+E         ֵ     u         ֻ
+a:        ֲ     U        וּ
+a         ַ
 =====  ======  =====  ======
 
 Other marks
