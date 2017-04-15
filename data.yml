@@ -3,12 +3,12 @@ keys:
     - consonants
     - vowels
     - other
+    - clusters
 
   mid:
     - mid_patterns
     - cc
     - dubs
-    - clusters
 
   front:
     - beginning
@@ -68,9 +68,7 @@ consonants:
 vowels:
   :: ְ
   i:  ִ
-  iy:  ִי
   I:  ִי
-  Iy:  ִי
   'e:': ֱ
   e:  ֶ
   E:  ֵ
@@ -85,10 +83,9 @@ vowels:
   Ow: וֹ
   u:  ֻ
   U: וּ
-  Uw: וּ
 
 other:
-  U:  ּ
+  .:  ּ
   <:  ֫
   ^: ֑
 
@@ -128,6 +125,7 @@ mid_patterns:
   VV: \1א\2
   OwV:  ֺו\1
   owV: וֹ\1
+  EyV:  ֵי\1
   'AC:':  ָֽ\1ְ
   A2C: ָֽ\1
   AD: ָֽ\1

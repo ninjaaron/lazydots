@@ -56,10 +56,10 @@ vowels
 i         ִ     o:        ֳ
 I         ִי    o         ָ
 e:        ֱ     O         ֹ
-e         ֶ     Ow       וֹ
-E         ֵ     u         ֻ
-a:        ֲ     U        וּ
-a         ַ     Uw       וּ
+e         ֶ     O         ֹ
+E         ֵ     Ow       וֹ
+a:        ֲ     u         ֻ
+a         ַ     U        וּ
 =====  ======  =====  ======
 
 Other marks
@@ -74,8 +74,7 @@ The general idea is that lower-case represents a short vowel, upper case
 represents an unmarked long vowel, and a vowel plus the usual
 accompanying consonant for mater lectionis represents a marked long
 vowel. Of course, in the case of /i/ class and /u/ class, there is no
-unmarked long form, so the marking can be inferred from the context.
-However, they may also be marked.
+unmarked long form, so the marking can be inferred from the length.
 
 You should only use the ":" to mark vocal schwa. Silent schwa will
 automatically be supplied. In general, you don't really have to mark the
