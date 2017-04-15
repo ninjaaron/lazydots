@@ -37,7 +37,7 @@ aspirated vowel at the beginning of a word, like, if it were following a
 conjunctive accent or whatevs.
 
 If you want these two characters separately, you can always separate
-them with a single quote, i.e. *t'h* This goes for other digraphs as
+them with a single quote, i.e. *t'h* = תְה This goes for other digraphs as
 well, like sh and ts.
 
 Inversely, if you're not getting a dagesh where you want it, you can
