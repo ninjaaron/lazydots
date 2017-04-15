@@ -83,13 +83,12 @@ vowels:
   o:  ָ
   O:  ֹ
   Ow: וֹ
-  ow: וֹ
   u:  ֻ
   U: וּ
   Uw: וּ
 
 other:
-  .:  ּ
+  U:  ּ
   <:  ֫
   ^: ֑
 
@@ -127,6 +126,7 @@ dubs:
 mid_patterns:
   CB: \1ְ\2ּ
   OwV:  ֺו\1
+  owV: וֹ\1
   'AC:':  ָֽ\1ְ
   A2C: ָֽ\1
   AD: ָֽ\1
@@ -138,6 +138,8 @@ cc:
 final:
   k: ךְ
   kh: ךְ
+  'k:': ךְ
+  'kh:': ךְ
   kA: ךָ
   khA: ךָ
   kkA: ךָּ
@@ -147,6 +149,7 @@ final:
   m: ם
   n: ן
   nA: ןָ
+  nA<: ןָ֫
   f: ף
   ts: ץ
   ah:  ָה
@@ -154,15 +157,18 @@ final:
   a:  ָ
   a<:  ָ֫
   o: וֹ
-  o<: וֹ֫
+  o<:  ֫וֹ
   O: וֹ
-  O<: וֹ֫
+  O<:  ֫וֹ
   e: ֵי
   e<: ֵ֫י
   E: ֵי
   E<: ֵ֫י
   i:  ִי
   i<:  ִ֫י
+  u: וּ
+  u<:  ֫וּ
+  U<:  ֫וּ
 
 final_patterns:
   Ct: \1ְתְּ
