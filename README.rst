@@ -136,10 +136,9 @@ select text and have it replaced with Hebrew when I hit the binding:
 
 This works on linux with X11. Details may vary on other systems.
 
-The ``lzd`` command also has one flag: ``-n``/``--normalize``. This
-applies will output the canonical normalized form. At the moment, by
-default, it outputs the normalized form that looks the best with my
-fonts.
+The ``lzd`` command also has one flag: ``-n``/``--normalize``. This will
+output the canonical normalized form. At the moment, by default, it
+outputs the form that looks the best with my fonts.
 
 Please report bugs!
 

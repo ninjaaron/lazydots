@@ -16,6 +16,7 @@ def make_pointy(keys, word):
     if remainder:
         front, remainder = keys['front'].getpart(remainder)
     else:
+        # shit just got real
         front, remainder = keys['front'].getpart(word)
         if remainder:
             end, remainer = keys['mid'].getpart(remainder).add()
