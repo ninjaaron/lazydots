@@ -18,8 +18,11 @@ def make_pointy(keys, word):
     else:
         front, remainder = keys['front'].getpart(word)
         if remainder:
-            end = keys['mid'].getallparts(remainder).add()
+            end, remainer = keys['mid'].getpart(remainder).add()
             return (front+end)[0].value
+        if remainder:
+            middle = keys['mid'].getallparts(remainder).add()
+            return (front + middle + end)[0].value
         else:
             return (front)[0].value
     if remainder:
