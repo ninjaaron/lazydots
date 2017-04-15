@@ -12,40 +12,20 @@ error-prone, so please report bugs!
 replacement table
 -----------------
 
-=====  ======
-ascii  hebrew
-=====  ======
-'        א
-b        ב
-v        ב
-g        ג
-gh       ג
-d        ד
-dh       ד
-h        ה
-w        ו
-z        ז
-H        ח
-ch       ח
-T        ט
-y        י
-k        כ
-kh       כ
-l        ל
-m        מ
-n        נ
-s        ס
-`        ע
-p        פ
-f        פ
-q        ק
-r        ר
-ts       צ
-S        שׂ
-sh       שׁ
-t        ת
-th       ת
-=====  ======
+=====  ======  =====  ======  =====  ======
+ascii  hebrew  ascii  hebrew  ascii  hebrew
+=====  ======  =====  ======  =====  ======
+'        א     H        ח     \`       ע
+b        ב     ch       ח     p        פ
+v        ב     T        ט     f        פ
+g        ג     y        י     q        ק
+gh       ג     k        כ     r        ר
+d        ד     kh       כ     ts       צ
+dh       ד     l        ל     S        שׂ
+h        ה     m        מ     sh       שׁ
+w        ו     n        נ     t        ת
+z        ז     s        ס     th       ת
+=====  ======  =====  ======  =====  ======
 
 The consonants are pretty straight-forward. As far as BeGaD KeFaT
 letters, the program should actually do the right thing most of the time
@@ -70,24 +50,16 @@ Please report bugs!
 
 vowels
 
-=====  ======
-:         ְ
-i         ִ
-I         ִי
-e:        ֱ
-e         ֶ
-E         ֵ
-a:        ֲ
-a         ַ
-A         ָ
-o:        ֳ
-o         ָ
-O         ֹ
-Ow       וֹ
-u         ֻ
-U        וּ
-Uw       וּ
-=====  ======
+=====  ======  =====  ======
+:         ְ     A         ָ
+i         ִ     o:        ֳ
+I         ִי    o         ָ
+e:        ֱ     O         ֹ
+e         ֶ     Ow       וֹ
+E         ֵ     u         ֻ
+a:        ֲ     U        וּ
+a         ַ     Uw       וּ
+=====  ======  =====  ======
 
 Other marks
 
