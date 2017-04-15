@@ -19,15 +19,14 @@ def make_pointy(keys, word):
         front, remainder = keys['front'].getpart(word)
         if remainder:
             end = keys['mid'].getallparts(remainder).add()
+            return (front+end)[0].value
         else:
             return (front)[0].value
-        return (front+end)[0].value
-
     if remainder:
         middle = keys['mid'].getallparts(remainder).add()
+        return (front + middle + end)[0].value
     else:
         return (front + end)[0].value
-    return (front + middle + end)[0].value
 
 
 def make_pointy_line(line):
