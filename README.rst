@@ -79,8 +79,9 @@ vowel. Of course, in the case of /i/ class and /u/ class, there is no
 unmarked long form, so the marking can be inferred from the length.
 
 You should only use the ":" to mark vocal schwa. Silent schwa will
-automatically be supplied. In general, you don't really have to mark the
-vocal schwa either, but you do need it for BeGaD KeFaT letters.
+automatically be supplied. You don't always have to mark the
+vocal schwa either, but you do need it for BeGaD KeFaT letters and other
+circumstances where open or closed sylables can affect vocalizations.
 
 The software should automatically add meteg to disambiguate between
 qamats qatan and qamats gadol when necessary. The Oleh accent is
