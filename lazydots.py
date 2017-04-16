@@ -1,5 +1,6 @@
 import unicodedata
 from pathlib import Path
+import functools
 import deromanize
 import yaml
 
@@ -10,6 +11,14 @@ with CONFIG_FILE.open(encoding='utf-8') as config:
     keys = deromanize.cached_keys(yaml.safe_load, config, CACHE_PATH)
 
 
+def get_top(func):
+    @functools.wraps(func)
+    def wrapped(word):
+        return func(word)[0].value
+    return wrapped
+
+
+@get_top
 @keys.processor
 def make_pointy(keys, word):
     end, remainder = keys['end'].getpart(word)
@@ -20,15 +29,15 @@ def make_pointy(keys, word):
         front, remainder = keys['front'].getpart(word)
         if remainder:
             end, remainer = keys['mid'].getpart(remainder).add()
-            return (front+end)[0].value
+            return (front+end)
         if remainder:
             middle = keys['mid'].getallparts(remainder).add()
-            return (front + middle + end)[0].value
+            return (front + middle + end)
         else:
-            return (front)[0].value
+            return (front)
     if remainder:
         middle = keys['mid'].getallparts(remainder).add()
-        return (front + middle + end)[0].value
+        return (front + middle + end)
     else:
         return (front + end)[0].value
 

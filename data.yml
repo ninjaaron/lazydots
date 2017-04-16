@@ -6,9 +6,9 @@ keys:
     - clusters
 
   mid:
-    - mid_patterns
     - cc
     - dubs
+    - mid_patterns
 
   front:
     - beginning
@@ -116,7 +116,6 @@ dubs:
   tt: תּ
 
 mid_patterns:
-  CB: \1ְ\2ּ
   VV: \1א\2
   OwV:  ֺו\1
   owV: וֹ\1
@@ -125,6 +124,7 @@ mid_patterns:
   A2C: ָֽ\1
   AD: ָֽ\1
   "'C": א\1
+  CB: \1ְ\2ּ
 
 cc:
   CC: \1ְ\2
