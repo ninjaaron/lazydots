@@ -122,8 +122,8 @@ read from stdin. Output is sent to stdout.
 
 .. code:: sh
 
-  $ lzd "lAmAh attAh hitnAhAgtA kzOwnAh bimsibbAh"
-  לָמָה אַתָּה הִתְנָהָגְתָּ כְּזוֹנָה בִּמְסִבָּה
+  $ lzd "lAmAh attAh hitnAhAghtA kmO nudnIq"
+  לָמָה אַתָּה הִתְנָהָגְתָּ כְּמוֹ נֻדְנִיק
 
 Very fancy. I use this in a little script that I bind to a key so I can
 select text and have it replaced with Hebrew when I hit the binding:
