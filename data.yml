@@ -7,8 +7,8 @@ keys:
 
   mid:
     - cc
-    - dubs
     - mid_patterns
+    - dubs
 
   front:
     - beginning
