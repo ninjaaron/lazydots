@@ -23,23 +23,31 @@ def get_top(func):
 def make_pointy(keys, word):
     end, remainder = keys['end'].getpart(word)
     if remainder:
-        front, remainder = keys['front'].getpart(remainder)
+        try:
+            front, remainder = keys['front'].getpart(remainder)
+        except KeyError:
+            return no_end(keys, word)
     else:
-        # shit just got real
-        front, remainder = keys['front'].getpart(word)
-        if remainder:
-            end, remainer = keys['mid'].getpart(remainder).add()
-            return (front+end)
-        if remainder:
-            middle = keys['mid'].getallparts(remainder).add()
-            return (front + middle + end)
-        else:
-            return (front)
+        return no_end(keys, word)
+
     if remainder:
         middle = keys['mid'].getallparts(remainder).add()
         return (front + middle + end)
     else:
         return (front + end)
+
+
+def no_end(keys, word):
+        front, remainder = keys['front'].getpart(word)
+        if remainder:
+            end, remainder = keys['end'].getpart(remainder)
+            if remainder:
+                middle = keys['mid'].getallparts(remainder).add()
+                return (front + middle + end)
+            else:
+                return (front + end)
+        else:
+            return (front)
 
 
 def make_pointy_line(line):

@@ -7,8 +7,8 @@ keys:
 
   mid:
     - cc
-    - mid_patterns
     - dubs
+    - mid_patterns
 
   front:
     - beginning
@@ -166,6 +166,7 @@ final:
 
 final_patterns:
   Ct: \1ְתְּ
+  Vt: \1ת
   VaG: \1\2ַ
   Vah: \1הַּ
 
