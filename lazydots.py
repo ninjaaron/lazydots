@@ -39,7 +39,7 @@ def make_pointy(keys, word):
         middle = keys['mid'].getallparts(remainder).add()
         return (front + middle + end)
     else:
-        return (front + end)[0].value
+        return (front + end)
 
 
 def make_pointy_line(line):
