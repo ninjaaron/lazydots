@@ -54,14 +54,15 @@ vowels
 =====  ======  =====  ======
 ascii  hebrew  ascii  hebrew
 =====  ======  =====  ======
-:         ְ     A         ָ
-i         ִ     o:        ֳ
-I         ִי    o         ָ
+:         ְ     a         ַ
+i         ִ     A         ָ
+I         ִי    o:        ֳ
+i.        ִי    o         ָ
 e:        ֱ     O         ֹ
-e         ֶ     Ow       וֹ
+e         ֶ     o.       וֹ
 E         ֵ     u         ֻ
-a:        ֲ     U        וּ
-a         ַ
+e.        ֵי    U        וּ
+a:        ֲ     u.       וּ
 =====  ======  =====  ======
 
 Other marks
@@ -73,14 +74,16 @@ Other marks
 =====  ======
 
 The general idea is that lower-case represents a short vowel, upper case
-represents an unmarked long vowel, and a vowel plus the usual
-accompanying consonant for mater lectionis represents a marked long
-vowel. Of course, in the case of /i/ class and /u/ class, there is no
-unmarked long form, so the marking can be inferred from the length.
+represents an unmarked long vowel, and a vowel plus a period represents
+a marked long vowel. Of course, in the case of /i/ class and /u/ class,
+there is no unmarked long form, so the marking can be inferred from the
+length (though the form with the period is also valid). Qamets-he,
+segol-he, holem-he and anything else indicated with a he' is followed
+by an "h"
 
-You should only use the ":" to mark vocal schwa. Silent schwa will
-automatically be supplied. You don't always have to mark the
-vocal schwa either, but you do need it for BeGaD KeFaT letters and other
+You should normally only use the ":" to mark vocal schwa. Silent schwa
+will automatically be supplied. You don't always have to mark the vocal
+schwa either, but you do need it for BeGaD KeFaT letters and other
 circumstances where open or closed sylables can affect vocalizations.
 
 The software should automatically add meteg to disambiguate between
@@ -123,7 +126,7 @@ read from stdin. Output is sent to stdout.
 
 .. code:: sh
 
-  $ lzd "lAmAh attAh hitnAhAghtA kmO nudnIq"
+  $ lzd "lAmAh attAh hitnAhAghtA kmo. nudnIq"
   לָמָה אַתָּה הִתְנָהָגְתָּ כְּמוֹ נֻדְנִיק
 
 Very fancy. I use this in a little script that I bind to a key so I can
@@ -156,7 +159,7 @@ basically, you do this:
 .. code:: python
 
   >>> import lazydots
-  >>> lazydots.make_pointy_text("Eyzeh TippEsh attAh")
+  >>> lazydots.make_pointy_text("e.zeh TippEsh attAh")
   "אֵיזֶה טִפֵּשׁ אַתָּה"
 
 You can also do ``make_pointy_line`` if you want to go line by line or
