@@ -93,13 +93,16 @@ other:
 
 clusters:
   "B'h": \1ְה
+  Ow:  ֺו
+  Oww:  ֺוּ
+  ow: וֹ
+  oww: וֹּ
 
 dubs:
   bb: בּ
   gg: גּ
   dd: דּ
   ww: וּ
-  vv: וּ
   zz: זּ
   TT: טּ
   yy: יּ
@@ -172,6 +175,10 @@ final_patterns:
 beginning:
   B: \1ּ
   V: א\1
+  Ow: אֺו
+  Oww: אֺוּ
+  ow: אוֹ
+  oww: אוֹּ
 
 beginning_patterns:
   FC: \1ְ\2

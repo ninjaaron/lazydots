@@ -77,7 +77,7 @@ The general idea is that lower-case represents a short vowel, upper case
 represents an unmarked long vowel, and a vowel plus a period represents
 a marked long vowel. Of course, in the case of /i/ class and /u/ class,
 there is no unmarked long form, so the marking can be inferred from the
-length (though the form with the period is also valid). Qamets-he,
+length (though the form with the period is also valid). Qamats-he,
 segol-he, holem-he and anything else indicated with a he' is followed
 by an "h"
 
@@ -103,18 +103,23 @@ Hebrew :D
 
 Some special notes about holems and consonantal vavs:
 
- Whenever the sofware sees something like *Owa*, or a holem and a vav
- followed by another vowel, it will infer that there is a consonantal
- vav. This will generate the special unicode character "holem haser with
- vav," which is more technically correct, but may look odd with some
- fonts. If you want it to generate the regular holem-vav in this
- situation use *owa* (with lowercase *o*).
+ Whenever the sofware sees *Ow* it will generate the special unicode
+ character "holem haser with vav," which should cause holem to float
+ above the vav as it does in a properly pointed text. However, not all
+ fonts implement this this, and sometimes a holem-vav looks better.
+ If you want it to generate the regular holem-vav in this situation use
+ *ow* (with lowercase *o*).
 
- It you ever need to produce a holem with a geminated vav (I don't think
- this actually exists in the Bible, but please correct me if I'm wrong),
- simply write "*Ow.*" (explicit dagesh). The normal methods will not
- work in this case because *Oww* actually means a holem-vav followed by
- a consonantal vav.
+ This means it is impossible to write qamats
+ qatan in front a consonantal vav, but I don't think such a thing exists
+ in the Hebrew language. The only theoretical exception I can come up
+ with would be a wayyiqtol form of קוה. (of course, if such a thing does
+ exist, I would be very excited to learn of it!). In any case, one
+ should be able to make due by writing *wayyA<qAw* and just not telling
+ anyone that it's actually a qamats gadol. If you were in a case with a
+ qamats qatan preceeding a consonantal vav in a closed sylables that
+ wasn't at the end of the word, you might get a meteg... I guess just
+ delete it.
 
 Please report bugs!
 
