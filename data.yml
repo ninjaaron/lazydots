@@ -3,12 +3,12 @@ keys:
     - consonants
     - vowels
     - other
-    - clusters
 
   mid:
+    - clusters
     - cc
-    - dubs
     - mid_patterns
+    - dubs
 
   front:
     - beginning
@@ -34,8 +34,6 @@ char_sets:
     chars: cc
 
 consonants:
-  "'": א
-  b: ב
   v: ב
   g: ג
   gh: ג
@@ -75,6 +73,7 @@ vowels:
   E:  ֵ
   ey:  ֶי
   e.:  ֵי
+  ei:  ֵי
   'a:':  ֲ
   a:  ַ
   A:  ָ
@@ -124,9 +123,9 @@ mid_patterns:
   VV: \1א\2
   'AC:':  ָֽ\1ְ
   A2C: ָֽ\1
-  AD: ָֽ\1
-  "'C": א\1
+  A w: ָֽ\1
   CB: \1ְ\2ּ
+  "'C": א\1
 
 cc:
   CC: \1ְ\2
@@ -142,10 +141,14 @@ final:
   kA<: ךָ֫
   khA<: ךָ֫
   kkA<: ךָּ֫
+  k<A: ךָ֫
+  kh<A: ךָ֫
+  kk<A: ךָּ֫
   m: ם
   n: ן
   nA: ןָ
   nA<: ןָ֫
+  n<A: ןָ֫
   f: ף
   ts: ץ
   ah:  ָה
@@ -168,7 +171,6 @@ final:
 
 final_patterns:
   Ct: \1ְתְּ
-  Vt: \1ת
   VaG: \1\2ַ
   Vah: \1הַּ
 
@@ -182,6 +184,7 @@ beginning:
 
 beginning_patterns:
   FC: \1ְ\2
+  U: וּ
 
 broken_clusters:
   gh: "g'h"
@@ -190,3 +193,4 @@ broken_clusters:
   sh: "s'h"
   ts: "t's"
   th: "t'h"
+  ei: "e'i"
