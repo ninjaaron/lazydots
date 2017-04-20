@@ -14,7 +14,7 @@ with CONFIG_FILE.open(encoding='utf-8') as config:
 def get_top(func):
     @functools.wraps(func)
     def wrapped(word):
-        return func(word)[0].value
+        return str(func(word)[0])
     return wrapped
 
 
