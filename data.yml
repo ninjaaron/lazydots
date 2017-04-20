@@ -34,6 +34,7 @@ char_sets:
     chars: cc
 
 consonants:
+  b: ב
   v: ב
   g: ג
   gh: ג
@@ -89,6 +90,7 @@ other:
   .:  ּ
   <:  ֫
   ^: ֑
+  h.: הּ
 
 clusters:
   "B'h": \1ְה
