@@ -28,15 +28,11 @@ char_sets:
   V: vowels
   B: [b, g, d, k, p, t]
   G: [h., H, ch, '`']
-  D:
-    key: dubs
-    chars: dubs
+  D: dubs
   F:
     key: front
     chars: consonants
-  2C:
-    key: mid
-    chars: cc
+  2C: cc
 
 consonants:
   "'": א
