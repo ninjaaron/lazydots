@@ -20,12 +20,17 @@ keys:
       - final_patterns
     suffix: true
 
+  dubs: dubs
+  cc: cc
+
 char_sets:
   C: consonants
   V: vowels
   B: [b, g, d, k, p, t]
   G: [h., H, ch, '`']
-  D: dubs
+  D:
+    key: dubs
+    chars: dubs
   F:
     key: front
     chars: consonants
@@ -126,7 +131,7 @@ mid_patterns:
   VV: \1א\2
   'AC:':  ָֽ\1ְ
   A2C: ָֽ\1
-  A w: ָֽ\1
+  AD: ָֽ\1
   CB: \1ְ\2ּ
   "'C": א\1
 
