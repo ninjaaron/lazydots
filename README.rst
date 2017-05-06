@@ -7,6 +7,10 @@ with minimal effort.
 This software tries to be smarty-pants, which really means it is
 error-prone, so please report bugs!
 
+You can test out a web implementation here_.
+
+.. _here: https://ninjaaron.github.io/lazydots/
+
 .. contents::
 
 replacement table
