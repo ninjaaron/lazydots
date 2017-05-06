@@ -1,6 +1,14 @@
-a {
-    color: #db9;
-    hover: #fd9;
+a:link {
+    text-decoration: none;
+    color: #c96;
+}
+a:visited {
+    text-decoration: none;
+    color: #c96;
+}
+a:hover {
+    text-decoration: none;
+    color: #fb6;
 }
 body {
     background-color: #223;
