@@ -16,7 +16,6 @@ function getevent(e)
 	    }
 	}
     })
-    // var output = trieop.getallparts(data.mid, e.target.value)
     poo.value = words.join('')
 }
 
