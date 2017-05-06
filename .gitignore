@@ -4,4 +4,4 @@ __pycache__
 *.pyc
 *.whl
 venv*
-*.html
+doc.html

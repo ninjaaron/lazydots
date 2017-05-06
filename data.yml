@@ -1,3 +1,6 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
 keys:
   base:
     - consonants
@@ -8,6 +11,7 @@ keys:
     - clusters
     - cc
     - mid_patterns
+    - vowels
     - dubs
 
   front:
@@ -83,6 +87,7 @@ vowels:
   o:  ָ
   O:  ֹ
   o.: וֹ
+  O.: וֹ
   u:  ֻ
   U: וּ
   u.: וּ
@@ -147,11 +152,23 @@ final:
   k<A: ךָ֫
   kh<A: ךָ֫
   kk<A: ךָּ֫
+  ka: ךָ
+  kha: ךָ
+  kka: ךָּ
+  ka<: ךָ֫
+  kha<: ךָ֫
+  kka<: ךָּ֫
+  k<a: ךָ֫
+  kh<a: ךָ֫
+  kk<a: ךָּ֫
   m: ם
   n: ן
   nA: ןָ
   nA<: ןָ֫
   n<A: ןָ֫
+  na: ןָ
+  na<: ןָ֫
+  n<a: ןָ֫
   f: ף
   ts: ץ
   ah:  ָה
