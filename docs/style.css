@@ -1,3 +1,8 @@
+body {
+    background-color: #223;
+    color:#779;
+    font-family: "Linux Libertine", "Times New Roman", Times, serif;
+}
 a:link {
     text-decoration: none;
     color: #c96;
@@ -9,11 +14,6 @@ a:visited {
 a:hover {
     text-decoration: none;
     color: #fb6;
-}
-body {
-    background-color: #223;
-    color:#779;
-    font-family: "Linux Libertine", "Times New Roman", Times, serif;
 }
 textarea {
     background-color: #223;
