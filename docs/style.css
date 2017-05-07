@@ -31,8 +31,7 @@ textarea {
     margin: auto;
 }
 #poo {
-    font-family: "Taamey Frank CLM", "SBL Hebrew", "Ezra SIL",
-    "Cardo", "Linux Libertine", "Times New Roman", Times, serif;
+    font-family: "Taamey Frank CLM", "SBL Hebrew", "Ezra SIL";
     font-size: 2.0em;
     width: 500;
     height: 300px;

@@ -1,9 +1,11 @@
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 keys:
   base:
     - consonants
+    - semivowels
     - vowels
     - other
 
@@ -11,7 +13,7 @@ keys:
     - clusters
     - cc
     - mid_patterns
-    - vowels
+    - all_vowels
     - dubs
 
   front:
@@ -26,10 +28,14 @@ keys:
 
   dubs: dubs
   cc: cc
+  all_vowels: all_vowels
+  semivowels: semivowels
 
 char_sets:
   C: consonants
   V: vowels
+  \s: semivowels
+  \v: all_vowels
   B: [b, g, d, k, p, t]
   G: [h., H, ch, '`']
   D: dubs
@@ -72,26 +78,32 @@ consonants:
 
 vowels:
   :: ְ
-  i:  ִ
-  I:  ִי
+  I:  ִ
+  i:  ִי
   i.:  ִי
-  'e:': ֱ
   e:  ֶ
   E:  ֵ
   ey:  ֶי
   e.:  ֵי
   ei:  ֵי
-  'a:':  ֲ
   a:  ַ
   A:  ָ
-  'o:':  ֳ
-  o:  ָ
-  O:  ֹ
+  O:  ָ
+  o:  ֹ
   o.: וֹ
   O.: וֹ
-  u:  ֻ
-  U: וּ
+  U:  ֻ
+  u: וּ
   u.: וּ
+
+semivowels:
+  'e:': ֱ
+  'a:':  ֲ
+  'o:':  ֳ
+
+all_vowels:
+  V: \1
+  \s: \1
 
 other:
   .:  ּ
@@ -121,6 +133,7 @@ dubs:
   pp: פּ
   ss: סּ
   qq: קּ
+  qq: קּ
   tts: צּ
   tsts: צּ
   SS: שּׂ
@@ -129,12 +142,25 @@ dubs:
   tt: תּ
 
 mid_patterns:
-  VV: \1א\2
+  \v\v: \1א\2
   'AC:':  ָֽ\1ְ
   A2C: ָֽ\1
   AD: ָֽ\1
   CB: \1ְ\2ּ
   "'C": א\1
+  aCV:  ָ\1\2
+  'aC:':  ָֽ\1ְ
+  ACV:  ַ\1\2
+  u2C:  ֻ\1
+  uD:  ֻ\1
+  # U2C: וּ\1
+  # UD: וּ\1
+  i2C: ִ\1
+  iD: ִ\1
+  o2C:  ָ\1
+  oD:  ָ\1
+
+
 
 cc:
   CC: \1ְ\2
@@ -194,10 +220,11 @@ final_patterns:
   Ct: \1ְתְּ
   VaG: \1\2ַ
   Vah: \1הַּ
+  aCah: ָ\1ָה
 
 beginning:
   B: \1ּ
-  V: א\1
+  \v: א\1
   Ow: אֺו
   Oww: אֺוּ
   ow: אוֹ
@@ -205,7 +232,7 @@ beginning:
 
 beginning_patterns:
   FC: \1ְ\2
-  U: וּ
+  u: וּ
 
 broken_clusters:
   gh: "g'h"
