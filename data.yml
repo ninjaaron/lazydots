@@ -13,8 +13,8 @@ keys:
     - clusters
     - cc
     - dubs
-    - mid_patterns
     - semivowels
+    - mid_patterns
 
   front:
     - beginning
@@ -25,7 +25,6 @@ keys:
     groups:
       - final
       - final_patterns
-      - semivowels
     suffix: true
 
   dubs: dubs
@@ -117,6 +116,9 @@ clusters:
   Oww:  ֺוּ
   ow: וֹ
   oww: וֹּ
+  ayi: ַיִ
+  ayI:  ָיִי
+  AyI:  ַיִי
 
 dubs:
   bb: בּ
@@ -156,9 +158,6 @@ mid_patterns:
   i2C: ִ\1
   o2C:  ָ\1
   O2C:  ֹ\1
-  ayi: ַיִ
-  ayI:  ָיִי
-  AyI:  ַיִי
   a'C:  ָא\1
   o'C:  ֹא\1
   i'C:  ִא\1
@@ -167,6 +166,10 @@ mid_patterns:
   O'C:  ָאְ\1
   I'C:  ִאְ\1
   E'C:  ֶאְ\1
+  ayi: ַיִ
+  ayI:  ָיִי
+  aCayi:  ָ\1ַיִ
+  aCayI:  ָ\1ָיִי
 
 cc:
   CC: \1ְ\2
@@ -207,6 +210,7 @@ final_patterns:
   VaG: \1\2ַ
   Vah: \1הַּ
   aCah: ָ\1ָה
+  aCa': ָ\1ָא
 
 beginning:
   B: \1ּ
