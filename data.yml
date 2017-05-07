@@ -5,25 +5,27 @@
 keys:
   base:
     - consonants
-    - semivowels
     - vowels
+    - semivowels
     - other
 
   mid:
     - clusters
     - cc
     - mid_patterns
-    - all_vowels
     - dubs
+    - semivowels
 
   front:
     - beginning
     - beginning_patterns
+    - semivowels
 
   end:
     groups:
       - final
       - final_patterns
+      - semivowels
     suffix: true
 
   dubs: dubs
@@ -68,6 +70,7 @@ consonants:
   "`": ע
   p: פ
   f: פ
+  ph: פ
   q: ק
   r: ר
   ts: צ
@@ -80,11 +83,9 @@ vowels:
   :: ְ
   I:  ִ
   i:  ִי
-  i.:  ִי
   e:  ֶ
   E:  ֵ
   ey:  ֶי
-  e.:  ֵי
   ei:  ֵי
   a:  ַ
   A:  ָ
@@ -106,7 +107,6 @@ all_vowels:
   \s: \1
 
 other:
-  .:  ּ
   <:  ֫
   ^: ֑
   h.: הּ
@@ -145,76 +145,52 @@ mid_patterns:
   \v\v: \1א\2
   'AC:':  ָֽ\1ְ
   A2C: ָֽ\1
-  AD: ָֽ\1
-  CB: \1ְ\2ּ
   "'C": א\1
-  aCV:  ָ\1\2
+  aC\v:  ָ\1\2
+  'aCa:': ַ\1ַ
+  'ACa:': ָ\1ַ
   'aC:':  ָֽ\1ְ
-  ACV:  ַ\1\2
+  AC\v:  ַ\1\2
   u2C:  ֻ\1
-  uD:  ֻ\1
   # U2C: וּ\1
-  # UD: וּ\1
   i2C: ִ\1
-  iD: ִ\1
   o2C:  ָ\1
-  oD:  ָ\1
-
-
+  O2C:  ֹ\1
+  ayi: ַיִ
+  ayI:  ָיִי
+  AyI:  ַיִי
 
 cc:
   CC: \1ְ\2
+  CB: \1ְ\2ּ
+  D: \1
 
 final:
   k: ךְ
   kh: ךְ
   'k:': ךְ
   'kh:': ךְ
-  kA: ךָ
-  khA: ךָ
-  kkA: ךָּ
-  kA<: ךָ֫
-  khA<: ךָ֫
-  kkA<: ךָּ֫
-  k<A: ךָ֫
-  kh<A: ךָ֫
-  kk<A: ךָּ֫
   ka: ךָ
   kha: ךָ
   kka: ךָּ
-  ka<: ךָ֫
-  kha<: ךָ֫
-  kka<: ךָּ֫
   k<a: ךָ֫
   kh<a: ךָ֫
   kk<a: ךָּ֫
   m: ם
   n: ן
-  nA: ןָ
-  nA<: ןָ֫
-  n<A: ןָ֫
   na: ןָ
-  na<: ןָ֫
   n<a: ןָ֫
   f: ף
   ts: ץ
   ah:  ָה
-  a<h:  ָ֫ה
+  a': ָא
   a:  ָ
-  a<:  ָ֫
   o: וֹ
-  o<:  ֫וֹ
   O: וֹ
-  O<:  ֫וֹ
   e: ֵי
-  e<: ֵ֫י
   E: ֵי
-  E<: ֵ֫י
   i:  ִי
-  i<:  ִ֫י
   u: וּ
-  u<:  ֫וּ
-  U<:  ֫וּ
 
 final_patterns:
   Ct: \1ְתְּ
@@ -237,6 +213,7 @@ beginning_patterns:
 broken_clusters:
   gh: "g'h"
   dh: "d'h"
+  ph: "p'h"
   kh: "k'h"
   sh: "s'h"
   ts: "t's"
