@@ -13,13 +13,12 @@ keys:
     - clusters
     - cc
     - dubs
-    - semivowels
     - mid_patterns
+    - semivowels
 
   front:
     - beginning
     - beginning_patterns
-    - semivowels
 
   end:
     groups:
