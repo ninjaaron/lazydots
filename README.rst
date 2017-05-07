@@ -77,7 +77,7 @@ cluster, which is always petach-yod-qamats because of words like מים,
 בית and anything with a dual ending. This is usually what you want, but
 you will have to make exceptions for segolats with medial gutterals like
 פַּחַד, which requeirs you to write ``pAchad``, or those occupational words
-like גָּנָב, which will be ``ganAv``. There are, of course, others places
+like גַּנָּב, which will be ``gannAv``. There are, of course, others places
 that will need to be ammended with capital 'A'.
 
 For lazydots to do its job, you still have to know where things like
