@@ -58,7 +58,6 @@ consonants:
   h: ה
   w: ו
   z: ז
-  H: ח
   ch: ח
   T: ט
   y: י
@@ -141,6 +140,8 @@ dubs:
   ssh: שּׁ
   shsh: שּׁ
   tt: תּ
+  ch.: ח
+  '`.': ע
 
 mid_patterns:
   \v\v: \1א\2
