@@ -40,7 +40,7 @@ char_sets:
     key: end
     chars: consonants
   B: [b, g, d, k, p, t]
-  G: [h., H, ch, "`"]
+  G: [h., ch, "`"]
   D: dubs
   F:
     key: front
