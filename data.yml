@@ -36,6 +36,9 @@ char_sets:
   V: vowels
   \s: semivowels
   \v: all_vowels
+  \e:
+    key: end
+    chars: consonants
   B: [b, g, d, k, p, t]
   G: [h., H, ch, "`"]
   D: dubs
@@ -85,8 +88,8 @@ vowels:
   E:  ֵ
   ey:  ֶי
   ei:  ֵי
-  a:  ַ
-  A:  ָ
+  A:  ַ
+  a:  ָ
   O:  ָ
   o:  ֹ
   o.: וֹ
@@ -115,9 +118,6 @@ clusters:
   Oww:  ֺוּ
   ow: וֹ
   oww: וֹּ
-  ayi: ַיִ
-  ayI:  ָיִי
-  AyI:  ַיִי
 
 dubs:
   bb: בּ
@@ -144,22 +144,19 @@ dubs:
 
 mid_patterns:
   \v\v: \1א\2
-  "AC:":  ָֽ\1ְ
+  a2C: ַ\1
   A2C: ָֽ\1
   "'C": א\1
-  aC\v:  ָ\1\2
   "aCa:": ַ\1ַ
   "ACa:": ָ\1ַ
   "aC:":  ָֽ\1ְ
-  AC\v:  ַ\1\2
   u2C:  ֻ\1
   # U2C: וּ\1
   i2C: ִ\1
+  I2C: ִי\1
   o2C:  ָ\1
   O2C:  ֹ\1
-  a'C:  ָא\1
-  o'C:  ֹא\1
-  i'C:  ִא\1
+  "'C":  א\1
   e'C:  ֵא\1
   A'C:  ַאְ\1
   O'C:  ָאְ\1
@@ -167,8 +164,6 @@ mid_patterns:
   E'C:  ֶאְ\1
   ayi: ַיִ
   ayI:  ָיִי
-  aCayi:  ָ\1ַיִ
-  aCayI:  ָ\1ָיִי
 
 cc:
   CC: \1ְ\2
@@ -206,10 +201,12 @@ final:
 
 final_patterns:
   Ct: \1ְתְּ
+  a\e:  ַ\1
+  A\e:  ָ\1
   VaG: \1\2ַ
   Vah: \1הַּ
-  aCah: ָ\1ָה
-  aCa': ָ\1ָא
+  ah:  ָה
+  a':  ָא
 
 beginning:
   B: \1ּ
