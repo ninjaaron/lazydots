@@ -70,17 +70,9 @@ def clean_key(key, tree=trees.Trie):
 
 
 def special_dump():
-    data = {k: json.dumps(clean_key(keys[k]), ensure_ascii=False)
-            for k in ('front', 'mid')}
-    data['end'] = json.dumps(
-        clean_key(keys['end'], trees.BackTrie), ensure_ascii=False)
-    return '\n'.join((
-        'data = {{',
-        '    front: {front},',
-        '    mid: {mid},',
-        '    end: {end},',
-        '}}'
-    )).format(**data)
+    data = {k: clean_key(keys[k]) for k in ('front', 'mid')}
+    data['end'] = clean_key(keys['end'], trees.BackTrie)
+    return json.dumps(data, ensure_ascii=False, separators=(',', ':'))
 
 
 def read_text():
@@ -98,7 +90,7 @@ def read_text():
     args = ap.parse_args()
 
     if args.dump:
-        print(special_dump())
+        print("data =", special_dump())
         sys.exit(0)
 
     pointy = '\n'.join(make_pointy_line(l) for l in args.string)
