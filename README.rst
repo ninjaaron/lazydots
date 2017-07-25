@@ -98,10 +98,9 @@ there are exceptions, like עִם, ``\`Im`` תִּשְׁמֹרְנָה, ``tishmOr
 
 ``e`` doesn't get any special "magical" resolution. It's always segol,
 and ``E`` is always tsere. This is because, on the whole, unmarked
-segol is much more common than unmarked tsere, even in open syllables. I
-may eventually figure out a way to determine something about segolized
-forms and do something that way, but I'm still not sure it would be much
-of an improvement.
+segol is much more common than unmarked tsere, even in open syllables.
+The exception is if ``e`` precedes a silent aleph, where it will become
+a tsere unless you tell it not to (with ``E``)
 
 General rule: if it's giving you the wrong vowel, capitalization should
 fix it.
