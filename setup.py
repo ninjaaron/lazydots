@@ -11,7 +11,8 @@ setup(
     description='make pointed Hebrew from ascii characters',
     long_description=open('README.rst').read(),
     keywords='hebrew',
-    py_modules=['lazydots'],
+    packages=['lazydots'],
     entry_points={'console_scripts': ['lzd=lazydots:read_text']},
     install_requires=['deromanize', 'PyYaml'],
+    include_package_data=True
 )

@@ -9,7 +9,7 @@ import deromanize
 from deromanize import trees
 import yaml
 
-CONFIG_FILE = Path(__file__).parent/'data.yml'
+CONFIG_FILE = Path(__file__).parent/'heb.yml'
 CACHE_PATH = Path().home()/'.cache'/'lzdcache'
 CACHE_PATH.parent.mkdir(exist_ok=True)
 with CONFIG_FILE.open(encoding='utf-8') as config:

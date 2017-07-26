@@ -1,2 +1,2 @@
 include fastentrypoints.py
-include data.yml
+include lazydots/heb.yml
