@@ -130,8 +130,8 @@ read from stdin. Output is sent to stdout.
 
 .. code:: sh
 
-  $ lzd "lamah attah hitnahagta kmo nudniq"
-  לָמָה אָתָּה הִתְנָהַגְתָּ כְּמוֹ נֻדְנִיק
+  $ lzd "lamah 'attah hitnahagta kmo nudniq"
+  לָמָה אַתָּה הִתְנָהַגְתָּ כְּמוֹ נֻדְנִיק
 
 Very fancy. I use this in a little script that I bind to a key so I can
 select text and have it replaced with Hebrew when I hit the binding:
@@ -163,7 +163,7 @@ basically, you do this:
 .. code:: python
 
   >>> import lazydots
-  >>> lazydots.make_pointy_text("eizeh TippEsh attah")
+  >>> lazydots.make_pointy_text("eizeh TippEsh 'attah")
   "אֵיזֶה טִפֵּשׁ אַתָּה"
 
 You can also do ``make_pointy_line`` if you want to go line by line or
