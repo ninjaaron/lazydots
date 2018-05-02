@@ -172,7 +172,9 @@ mid_patterns:
   A'B:  ַאְ\1ּ
   O'B:  ָאְ\1ּ
   ayi: ַיִ
-  ayI:  ָיִי
+  Ayi:  ָיִ
+  ayI: ַיִי
+  AyI:  ָיִי
 
 cc:
   CC: \1ְ\2
