@@ -10,49 +10,20 @@ from deromanize import trees
 import yaml
 
 CONFIG_FILE = Path(__file__).parent/'heb.yml'
-CACHE_PATH = Path().home()/'.cache'/'lzdcache'
-CACHE_PATH.parent.mkdir(exist_ok=True)
+# CACHE_PATH = Path().home()/'.cache'/'lzdcache'
+# CACHE_PATH.parent.mkdir(exist_ok=True)
 with CONFIG_FILE.open(encoding='utf-8') as config:
-    keys = deromanize.cached_keys(yaml.safe_load, config, CACHE_PATH)
+    keys = deromanize.KeyGenerator(yaml.safe_load(config))
 
 
 def get_top(func):
     @functools.wraps(func)
     def wrapped(word):
-        return str(func(word)[0])
+        return str(func(keys, word)[0])
     return wrapped
 
 
-@get_top
-@keys.processor
-def make_pointy(keys, word):
-    end, remainder = keys['end'].getpart(word)
-    if remainder:
-        try:
-            front, remainder = keys['front'].getpart(remainder)
-        except KeyError:
-            return no_end(keys, word)
-    else:
-        return no_end(keys, word)
-
-    if remainder:
-        middle = keys['mid'].getallparts(remainder).add()
-        return (front + middle + end)
-    else:
-        return (front + end)
-
-
-def no_end(keys, word):
-        front, remainder = keys['front'].getpart(word)
-        if remainder:
-            end, remainder = keys['end'].getpart(remainder)
-            if remainder:
-                middle = keys['mid'].getallparts(remainder).add()
-                return (front + middle + end)
-            else:
-                return (front + end)
-        else:
-            return (front)
+make_pointy = get_top(deromanize.front_mid_end_decode)
 
 
 def make_pointy_line(line):
